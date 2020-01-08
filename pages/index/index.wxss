@@ -1,0 +1,47 @@
+/**index.wxss**/
+
+.header{
+    padding: 20rpx 30rpx;
+    background: #ffffff;
+}
+.header-wrapper{
+    display: flex;
+    background: #ebebeb;
+    border-radius: 12rpx;
+    overflow: hidden;
+    width: 100%;
+    height: 70rpx;
+    padding: 14rpx 0;
+    box-sizing: border-box;
+}
+.header-search{
+    display: flex;
+    width: calc(100% - 178rpx);
+    box-sizing: border-box;
+    padding: 0 24rpx;  
+}
+.header-search-icon{
+    width: 70rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.header-search-icon-img{
+    width: 36rpx;
+    height: 36rpx;
+}
+.header-question{
+    width: 176rpx;
+    box-sizing: border-box;
+    padding: 0 26rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header-question-icon{
+    width: 30rpx;
+    height: 30rpx;
+    margin-right: 10rpx;
+    font-size: 30rpx;
+    font-weight: bold;
+}

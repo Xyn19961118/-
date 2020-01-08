@@ -1,0 +1,97 @@
+/* pages/activity/index.wxss */
+page {
+    background: #fff;
+}
+
+/* .container {
+  padding: 20rpx 30rpx 100rpx;
+} */
+
+.button {
+    width: 100%;
+    height: 80rpx;
+    background: #0084ff;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: 2;
+}
+
+.fixed {
+    position: fixed;
+    width: 80rpx;
+    height: 80rpx;
+    border-radius: 50%;
+    background: #0084ff;
+    color: #fff;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    padding: 10rpx;
+    text-align: center;
+}
+
+.user-list {
+    padding: 40rpx;
+}
+
+.user-item {
+    display: flex;
+    align-items: center;
+    padding: 20rpx 15rpx;
+    border-bottom: #ddd dashed 2rpx;
+}
+
+
+.user-index {
+    border: 1px solid #dfdfdf;
+    width: 40rpx;
+    height: 40rpx;
+    text-align: center;
+    background: orange;
+    color: #fff;
+    border-radius: 10rpx;
+    margin-right: 20rpx;
+}
+
+
+
+
+.user-name {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    color: #0084ff;
+}
+
+.user-img {
+    width: 60rpx;
+    height: 60rpx;
+    border-radius: 50%;
+    margin-right: 10rpx;
+}
+
+.user-text {
+    flex: 1;
+}
+
+.user-text-color {
+    color: #ff2233;
+}
+
+.user-item:nth-of-type(1) .user-text-color {
+    color: #FF3333;
+}
+
+.user-item:nth-of-type(2) .user-text-color {
+    color: #FF6633;
+}
+
+.user-item:nth-of-type(3) .user-text-color {
+    color: #FF9933;
+}

@@ -1,0 +1,31 @@
+/**
+ * 限制数组的数量
+ * @param arr 数组
+ * @param num 返回数量
+ */
+function limit(arr, num) {
+  if (arr.length > num && arr.length > 1) {
+    return arr.slice(0, num)
+  } else {
+    return arr
+  }
+}
+/**
+ *  格式化文本换行
+ * @param text  文本内容
+ */
+function format(text) {
+  if (text) {
+    var res = getRegExp('\\\\n', 'g')
+    return text.replace(res, '\n&nbsp;&nbsp;')
+  }
+}
+
+function filter(val) {
+  return val.replace('/', '/')
+}
+module.exports = {
+  limit: limit,
+  format: format,
+  filter: filter
+}

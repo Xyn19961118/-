@@ -1,0 +1,30 @@
+<!-- 评论列表 -->
+<block wx:for="{{childComment}}" wx:for-item="son" wx:key="{{son.id}}">
+  <view class="container">
+    <image class="head-pic" src="{{son.users.head_img}}" />
+    <view class="content">
+      <view class="content-wrap">
+        <view class="head-info">
+          <view class="head-name">{{son.users.wxname}}</view>
+          <image class="head-concat" src="./images/triangle.png" />
+          <view class="head-name">{{son.reply_do_author.wxname}}</view>
+          <view class="delete-comment" wx:if="{{son.users.id==userinfo.id}}" data-id="{{son.id}}" data-index="{{index}}" bind:tap="deleteComment">
+            删除
+          </view>
+        </view>
+        <view class="text">{{son.content}}</view>
+        <view class="bottom">
+          <view class="time">{{son.create_time}}</view>
+          <view class="center"></view>
+          <view class="handle">
+            <view class="like" data-id="{{son.id}}" data-index="{{index}}" data-pid="{{son.reply_id  || son.art_id}}" bind:tap="onLikes">
+              <image class="like-pic" src="{{son.likeStatus?'./images/liked.png':'./images/like.png'}}" />
+              <view class="like-text">{{son.click_number}}</view>
+            </view>
+            <image class="comment" src="./images/comment.png" bind:tap="discuss" data-name="{{son.users.wxname}}" data-userid="{{son.users.id}}" data-reply_id="{{son.reply_id  || son.art_id  || item.topic_id}}" data-pid="{{son.pid}}" data-index="{{index}}"></image>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</block>

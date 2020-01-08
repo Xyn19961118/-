@@ -1,0 +1,82 @@
+/* components/detail/commentItem/index.wxss */
+.container{
+    width: 100%;
+    display: flex;
+    padding-left: 30rpx;
+}
+.head-pic{
+    margin: 18rpx 20rpx 0 0; 
+    width: 80rpx;
+    height: 80rpx;
+    border: #eee 2rpx solid;
+    border-radius: 50%;
+}
+.content{
+    flex: 1;
+}
+.content-wrap{
+    
+    box-sizing: border-box;
+    padding: 24rpx 66rpx 24rpx 0; 
+    border-bottom: #eee 2rpx solid;
+}
+.head-info{
+    display: flex;
+    height: 52rpx;
+    align-items: center;
+}
+.head-concat{
+    width: 12rpx;
+    height: 18rpx;
+    margin: 0 16rpx;
+}
+.head-name{
+    color: #000;
+    font-weight: bold;
+}
+.text{
+    margin-top: 10rpx;
+    color: #333;
+}
+.bottom{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 24rpx;
+}
+.time{
+    font-size: 24rpx;
+    color: #999;
+}
+.handle{
+    display: flex;
+    align-items: center;
+}
+.like{
+    display: flex;
+    align-items: center;
+}
+.like-pic{
+    width: 24rpx;
+    height: 24rpx;
+    margin-right: 10rpx;
+}
+.like-text{
+    font-size: 24rpx;
+}
+.comment{
+    width: 26rpx;
+    height: 24rpx;
+    padding: 10rpx;
+    margin-left: 20rpx;
+}
+.all-comment{
+    font-size: 28rpx;
+    line-height: 80rpx;
+    color: #0084ff;
+    margin-left: 80rpx;
+}
+.delete-comment{
+    font-size: 24rpx;
+    margin-left: auto;
+    color: #0084ff;
+}

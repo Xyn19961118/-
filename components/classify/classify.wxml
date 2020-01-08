@@ -1,0 +1,8 @@
+<!-- components/classify/classify.wxml -->
+<view class='index-center'>
+  <view class='index-text-back' style="background:{{item.color}};"></view>
+  <view class='index-text-image'>
+    <image mode='aspectFit' src="{{item.img}}"></image>
+  </view>
+  <view class='index-text-text1'>{{item.name}}</view>
+</view>

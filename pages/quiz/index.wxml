@@ -1,0 +1,57 @@
+<!-- 提问 -->
+<view class="container">
+    <view class="head">
+        <input 
+					type="text"
+					class="title"
+					auto-focus
+					focus
+					placeholder="输入问题并以问号结尾"
+					placeholder-style="color:#999"
+					bindblur="titleBlur"
+        />
+				<textarea
+					class="describe"
+					placeholder="对问题进行补充说明，可以快速获得解答（选填）"
+					placeholder-style="color:#999"
+					bindblur="describeBlur"
+					bindinput="test"
+				>
+				</textarea>
+    </view>
+		<view class="images">
+			<label class="image-label">添加图片：</label>
+			<view class="image-right">
+				<view class="image-items">
+					<block wx:for="{{imageArrayBd}}" wx:key="{{index}}" wx:for-item="item">
+							<view class="image-item">
+								<image class="image" src="{{item}}" />
+								<image class="image-close" src="./images/close.png" bind:tap="deteleImage" data-index="{{index}}"/>	
+							</view>
+					</block>
+				</view>
+				<view class="image-add" bind:tap="getImage" wx:if="{{imageArrayBd.length<3}}">
+					<image class="image-add-i" src="./images/add-image.png" />
+				</view>
+			</view>
+		</view>
+		
+		<view class="wrapper">
+			<label>添加标签：</label>
+			<view class="wrapper-right">
+				<view class="items">
+					<block wx:for="{{tags}}" wx:for-item="tag" wx:key="{{index}}">
+						<view class="item" data-index="{{index}}">{{tag}} <image class="close" src="./images/close.png" catch:tap="closeTags" data-index="{{index}}"/></view>
+					</block>
+					
+					<picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}" range-key="name" >
+						<view class="add-item">+ 添加</view>
+					 </picker>
+				</view>
+			</view>
+		</view>
+
+	
+   <button class="submit" bind:tap="sumbieQuiz">提交</button> 
+</view>
+

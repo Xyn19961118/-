@@ -1,0 +1,37 @@
+<!-- 个人资料 -->
+<view class='container'>
+
+    <view class='header'>
+        <view class='header-center'>
+            <image class='header-pic' src='{{userInfo.head_img}}'></image>
+        </view>
+    </view>
+
+    <view class='content'>
+        <view class='item'>
+            <label>用户名</label>
+            <view class='item-content'>{{userInfo.wxname}}</view>
+        </view>
+        <view class='item'>
+            <label>等级</label>
+            <view class='item-content'>{{userInfo.garde}}</view>
+        </view>
+
+        <!-- <view class='item'>
+            <label>标签</label>
+            <view class='item-content item-tags'>
+                <block wx:for="{{tags}}" wx:for-item="tag" wx:key="{{index}}">
+                    <view class="item-tag" data-id="{{tag.id}}">{{tag.name}}
+                        <image class="close" src="./images/close.png" catch:tap="closeTags" data-index="{{index}}" />
+                    </view>
+                </block>
+
+                <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}" range-key="name">
+                    <view class="item-tag-add">+ 添加</view>
+                </picker>
+            </view>
+        </view> -->
+    </view>
+
+    <button class='submit' bind:tap="submit">保存</button>
+</view>

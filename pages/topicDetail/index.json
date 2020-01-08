@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "v-tags": "/components/detail/tags/index",
+    "v-item": "/components/detail/item/index",
+    "v-comment": "/components/detail/commentList/index",
+    "v-topic": "/components/detail/topic/index",
+    "v-discuss": "../../components/discussForm/index"
+  }
+}

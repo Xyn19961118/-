@@ -1,0 +1,32 @@
+<!-- 消息 -->
+<view class="container">
+    <block wx:for="{{newsList}}" wx:key="index" wx:for-item="item">
+        <view class="news-item" hover-class="active" hover-start-time="50" bind:tap="getInfo" data-user="{{item.do_user_id}}" data-type="{{item.category==1?1:0}}" data-id="{{item.art_id}}" data-uid="{{item.user_id}}">
+            <view class="news-head">
+                <block wx:if="{{item.category == 4}}">
+                    <image class="news-head-pic" src="https://wx.qlogo.cn/mmhead/Q3auHgzwzM5EKno9LUkNZVVs8ocFY8jf06GcegrG12SLiaX6sib3qqhw/0" lazy-load="{{true}}" mode="scaleToFill" />
+                </block>
+                <block wx:else>
+                    <image class="news-head-pic" src="{{item.users.head_img}}" lazy-load="{{true}}" mode="scaleToFill" />
+                </block>
+            </view>
+            <view class="news-content">
+                <view class="news-name">
+                    {{item.users.wxname}}
+                    <block wx:if="{{item.type == 5 }}">{{item.name}}了你</block>
+                    <view style="color:#f23" wx:if="{{item.category == 4 && item.type == 6}}">
+                        恭喜您！您已通过审核
+                    </view>
+                    <view style="color:#f23" wx:elif="{{item.category == 4 && item.type == 7}}">
+                        恭喜您！您已获奖
+                    </view>
+                    <block wx:else>
+                        <block wx:if="{{item.type != 5}}">{{item.name}}你的{{item.catName}}</block>
+                    </block>
+                </view>
+                <view class="news-title">{{item.title}}</view>
+                <view class="news-time">{{item.create_time}}</view>
+            </view>
+        </view>
+    </block>
+</view>

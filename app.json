@@ -1,0 +1,79 @@
+{
+  "pages": [
+    "pages/newIndex/index",
+    "pages/userItems/article/index",
+    "pages/topic/index",
+    "pages/topicTop/index",
+    "pages/topicList/index",
+    "pages/topicDetail/index",
+    "pages/categoryItem/index",
+    "pages/index/index",
+    "pages/userItems/myFans/index",
+    "pages/user/index",
+    "pages/userItems/follow/index",
+    "pages/quiz/index",
+    "pages/homePage/index",
+    "pages/searchDetail/index",
+    "pages/news/index",
+    "pages/write/index",
+    "pages/detail/index",
+    "pages/commentDetail/index",
+    "pages/userItems/question/index",
+    "pages/userItems/myData/index",
+    "pages/userItems/selectTag/index",
+    "pages/login/index",
+    "pages/writeReply/index",
+    "pages/questionnaire/index",
+    "pages/activity/index",
+    "pages/applyFirst/index",
+    "pages/applyscond/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "你知道吗？",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#999999",
+    "selectedColor": "#0084ff",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "pagePath": "pages/newIndex/index",
+        "text": "首页",
+        "iconPath": "image/icon01.png",
+        "selectedIconPath": "image/icon01@selected.png"
+      },
+      {
+        "pagePath": "pages/write/index",
+        "text": "写文章",
+        "iconPath": "image/icon02.png",
+        "selectedIconPath": "image/icon02@selected.png"
+      },
+      {
+        "pagePath": "pages/topicTop/index",
+        "text": "话题",
+        "iconPath": "image/topic01.png",
+        "selectedIconPath": "image/topic@selected.png"
+      },
+      {
+        "pagePath": "pages/news/index",
+        "text": "消息",
+        "iconPath": "image/icon03.png",
+        "selectedIconPath": "image/icon03@selected.png"
+      },
+      {
+        "pagePath": "pages/user/index",
+        "text": "我的",
+        "iconPath": "image/icon04.png",
+        "selectedIconPath": "image/icon04@selected.png"
+      }
+    ]
+  },
+  "navigateToMiniProgramAppIdList": [
+    "wxd947200f82267e58"
+  ],
+  "sitemapLocation": "sitemap.json",
+  "debug": true
+}

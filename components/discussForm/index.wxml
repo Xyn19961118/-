@@ -1,0 +1,26 @@
+<!-- 评论 -->
+<view class="container" wx:if="{{isClose}}">
+    <view class="wrapper">
+        <view class="head">
+            <view class="head-title">评论给 {{info.name}}</view>
+            <image class="head-close" src="./images/close.png" bind:tap="close"/>
+        </view>
+        <view class="content">
+            <textarea 
+                class="textarea" 
+                placeholder="友善的评论是交流的起点" 
+                placeholder-style="color:#999"
+                auto-focus
+                name="textarea"
+                fixed
+                bindinput="isInput"
+            >
+            </textarea>
+            
+        </view>
+        <view class="bottom" >
+            <button class="{{isInput?'active':''}}" bind:tap="discussSubmit" data-pid="{{info.pid}}" data-replyid="{{info.replyId}}" data-userid="{{info.userid}}" data-index="{{info.index}}" >发布</button>
+        </view>
+    </view>
+    <view class="bg" bind:tap="close"></view>
+</view>

@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "v-nav":"/components/userComponents/nav/index",
+    "v-content":"/components/userComponents/followContent/index"
+  }
+}

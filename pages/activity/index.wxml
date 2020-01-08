@@ -1,0 +1,19 @@
+<!-- 活动规则 -->
+<view class="container">
+    <rich-text nodes="{{nodes}}" class="content" wx:if="{{!isShow}}"></rich-text>
+    <view class="fixed" bind:tap="isShow" wx:if="{{id != 1}}">本期中奖</view>
+    <view class="user-list" wx:if="{{isShow}}">
+        <block wx:for="{{items}}" wx:if="{{items.length > 0}}" wx:key="uid">
+            <view class="user-item">
+                <view class="user-index">{{index + 1}}</view>
+                <view class="user-name">
+                    <image class="user-img" src="{{item.user_img}}" mode="widthFix" lazy-load></image>
+                    <text class="user-text">{{item.user_name}}</text>
+                    <text class="user-text-color">{{item.remark}}</text>
+                </view>
+            </view>
+        </block>
+        <image src="/image/none.png" mode="widthFix" lazy-load wx:if="{{items.length == 0}}"></image>
+    </view>
+    <view type="button" class="button" bind:tap="gotoWen">去领取</view>
+</view>

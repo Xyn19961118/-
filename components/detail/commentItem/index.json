@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "v-componet":"../commentItem2/index"
+  }
+}

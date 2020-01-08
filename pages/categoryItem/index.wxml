@@ -1,0 +1,8 @@
+<!-- https://www.wjx.cn/m/43422909.aspx -->
+<!-- <web-view src="https://www.wjx.cn/m/43422909.aspx" bindmessage=""></web-view> -->
+<view class="container">
+  <view class="content">
+    <v-nav dataCurr="{{dataCurr}}" bind:sendIndex="onGetIndex"></v-nav>
+    <v-content dataCurr="{{dataCurr}}" bind:sendIndex="onGetIndex" newArticle="{{focus}}" hotArticle="{{hot}}" bind:getPageArt="getPageArt" bind:newPageArt="newPageArt" bind:loadMoreArice="loadMoreArice"></v-content>
+  </view>
+</view>

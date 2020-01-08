@@ -1,0 +1,32 @@
+<!--components/search/index.wxml-->
+<view class="container">
+    <view class="header" >
+      <view class='header-wrapper'>
+          <image bind:tap="handleReturn" src='./images/return.png' class='header-img'></image>
+          <input type='search' class='header-input' placeholder='请输入搜索内容' bind:confirm="onSearch" focus="{{true}}"/>
+      </view>
+    </view>   
+
+	<view class="history">
+		<view class="history-title" >
+		<view class="history-title-txt" >
+			搜索历史
+		</view>
+		<view class="history-title-remove" bind:tap="clearAll">
+			清空
+		</view>		  
+	</view>
+	<view class="history-container">
+		 <block wx:for="{{search_list}}" wx:key="index" wx:for-index="index" wx:for-item="itemText">
+			<view class="history-item">
+			<image class="history-icon" src="./images/history-icon.png"/>
+			<view class="history-text" bind:tap="search" data-val="{{itemText}}">{{itemText}}</view>
+			<image class="history-remove" src="./images/remove.png" bind:tap="undel" data-index="{{index}}" data-key="{{index}}"/> 
+		</view>		 
+		 </block>
+	</view>
+	  
+
+   </view>
+</view>
+  

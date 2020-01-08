@@ -1,0 +1,31 @@
+<view class="item">
+    <view class="header">
+        <view class="number" wx:if="{{new}}">{{index+1}}</view>
+        <view class="topic-name">
+            #{{item.cat_name.name}}#
+            <image class="topic-top" src="/image/jiangbei.png" mode="widthFix" lazy-load wx:if="{{item.is_send}}"></image>
+        </view>
+        <view class="hot">{{item.look_number}}热度</view>
+    </view>
+    <view class="card">
+        <navigator class="" target="" url="/pages/topicDetail/index?id={{item.id}}" hover-class="none" open-type="navigate">
+            <!-- <rich-text class="content" nodes="{{item.content}}"></rich-text> -->
+            <view class="rich-text">{{item.desc}}</view>
+            <view class="rich-imgs {{item.filter_img.length>1 && item.filter_img.length<5?'rich4':''}} {{item.filter_img.length>4?'rich9':''}}  ">
+                <block wx:for="{{item.filter_img}}" wx:key="{{index}}" wx:for-item="img">
+                    <view class="rich-img">
+                        <image class="" src="{{foo.filter(img)}}" mode="widthFix" lazy-load></image>
+                    </view>
+                </block>
+            </view>
+        </navigator>
+    </view>
+</view>
+<wxs module="foo">
+  var filter = function(val){
+  return val.replace('\/','/')
+  }
+  module.exports = {
+  filter : filter,
+  }
+</wxs>

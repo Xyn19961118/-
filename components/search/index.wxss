@@ -1,0 +1,75 @@
+/* components/search/index.wxss */
+.container{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    background: #fff;
+}
+.header{
+    padding: 20rpx 30rpx;
+}
+.header-wrapper{
+  background: rgb(237,237,237);
+  height: 70rpx;
+  border-radius: 8rpx;
+  overflow: hidden;
+  display: flex;
+  width: 100%;
+}
+.header-img{
+  width: 40rpx;
+  height: 40rpx;
+  padding: 15rpx 30rpx;
+}
+.header-input{
+  font-size: 28rpx;
+  line-height: 70rpx;
+  height: 70rpx;
+  width: calc(100% - 80rpx)
+}
+.history{
+  padding: 0 30rpx;
+  width: 100%;
+	box-sizing: border-box;
+}
+.history-title{
+	margin-top: 36rpx;
+	line-height: 40rpx;
+	display: flex;
+	width: 100%;
+}
+.history-title-txt{
+	font-size: 32rpx;
+	color: #333;
+	font-weight: bold;
+}
+.history-title-remove{
+	margin-left: auto;
+	font-size: 24rpx;
+	color: #999;
+}
+.history-container{
+	margin-top: 20rpx;
+}
+.history-item{
+	padding: 24rpx 8rpx;
+	border-bottom: #eeeeee 2rpx solid; 
+	display: flex;
+	width: 100%;
+	box-sizing: border-box;
+	align-items: center;
+}
+.history-icon{
+	width: 32rpx;
+	height: 32rpx;
+	margin-right: 16rpx;
+}
+.history-remove{
+	width: 26rpx;
+	height: 26rpx;
+	margin-left: auto;
+	padding: 10rpx;
+}

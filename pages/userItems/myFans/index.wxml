@@ -1,0 +1,7 @@
+<!-- 我的粉丝 -->
+<view class="container">
+  <view class="myFans">粉丝数：{{number}}</view>
+  <scroll-view scroll-y="true" style="height:100vh;" bindscrolltolower="lower" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+    <v-item items="{{data}}" bind:unFocus="unFocus"></v-item>
+  </scroll-view>
+</view>

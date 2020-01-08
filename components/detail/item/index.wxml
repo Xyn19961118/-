@@ -1,0 +1,43 @@
+<!-- 回答列表 -->
+<view class="container">
+    <scroll-view scroll-y bindscrolltolower="lower">
+        <block wx:for="{{items}}" wx:key="{{item.id}}" wx:for-item="item">
+            <view class="item">
+                <view class="userinfo">
+                    <navigator class="" target="" url="/pages/homePage/index?id={{item.users.id}}" hover-class="navigator-hover" open-type="navigate">
+                        <image class="userinfo-pic" src="{{item.users.head_img}}" />
+                    </navigator>
+                    <view class="userinfo-name">{{item.users.wxname}}</view>
+                    <view class="userinfo-follow {{item.focusAuthor?'active':''}}" data-index="{{index}}" hover-class="active" data-id="{{item.users.id}}" data-status="{{item.focusAuthor}}" bind:tap="focusAuthor">
+                        {{item.focusAuthor?'已关注':'+关注'}}
+                    </view>
+                </view>
+                <view class="content">
+                    <rich-text class="content-text" nodes="{{item.desc}}"></rich-text>
+                    <view class="content-time">{{item.create_time}} · 著作权归作者所有</view>
+                </view>
+                <view class="comment" wx:if="{{item.commentList.length !==0}}">
+                    <v-hotComment commentList="{{item.commentList}}" commentNumber="{{item.comment_number}}" replyId="{{item.id}}" bind:clickMe="clickMe" bind:lookMore="lookMore"></v-hotComment>
+                </view>
+                <view class="handle">
+                    <view class="handle-item handle-like" bind:tap="onLike" data-index="{{index}}" data-id="{{item.id}}">
+                        <image class="handle-icon" src="{{item.statusList.like_status?'./images/icon01@active.png':'./images/icon01.png'}}" />
+                        <view class="handle-txt {{item.statusList.like_status?'selected':''}}">
+                            点赞({{item.like_number}})
+                        </view>
+                    </view>
+                    <view class="handle-item" bind:tap="onCollect" data-index="{{index}}" data-id="{{item.id}}">
+                        <image class="handle-icon" src="{{item.statusList.collect_status?'./images/icon02@active.png':'./images/icon02.png'}}" />
+                        <view class="handle-txt {{item.statusList.collect_status?'selected':''}}">
+                            {{item.statusList.collect_status?'已收藏':'收藏'}}
+                        </view>
+                    </view>
+                    <view class="handle-item" bind:tap="showBlock" data-id="{{item.id}}" data-index="{{index}}" data-name="{{item.users.wxname}}">
+                        <image class="handle-icon" src="./images/icon03.png" />
+                        <view class="handle-txt">评论({{item.comment_number}})</view>
+                    </view>
+                </view>
+            </view>
+        </block>
+    </scroll-view>
+</view>

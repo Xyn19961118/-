@@ -1,0 +1,49 @@
+<!-- 问卷调查 -->
+<view class="container">
+  <view class="title">注册可免费领取价值696元灵芝保健食品一套，亲测有效</view>
+  <view class="content">首次注册成功可免费领取价值696元灵芝保健食品一套，每个ID限领一次</view>
+  <view class="items">
+    <view class="item">
+      <view class="item-title">
+        <view class="tips">*</view>1.灵芝有多少年的服用历史？
+      </view>
+      <view class="item-content">
+        <view class="item-item">
+          <view class="icon"></view>
+          <view class="item-text">1000多年</view>
+        </view>
+        <view class="item-item">
+          <view class="icon"></view>
+          <view class="item-text">2000多年</view>
+        </view>
+        <view class="item-item">
+          <view class="icon"></view>
+          <view class="item-text">5000多年</view>
+        </view>
+      </view>
+    </view>
+
+    <view class="item">
+      <view class="item-title">
+        <view class="tips">*</view>2.申请人联系信息
+      </view>
+
+      <view class="item-content">
+
+        <view class="item-form">
+          <view class="item-label">申请人信息：</view>
+          <input class="item-input" value="" type="text" />
+        </view>
+
+        <view class="item-form">
+          <view class="item-label">联系电话：</view>
+          <input class="item-input" value="" type="text" />
+        </view>
+      </view>
+
+    </view>
+  </view>
+
+  <button type="button" class="submit">提交信息</button>
+
+</view>

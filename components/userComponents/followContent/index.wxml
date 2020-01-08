@@ -1,0 +1,15 @@
+<!-- 关注 内容 -->
+<view class="container">
+    <swiper class="swiper-wrapper" duration="300" current="{{dataCurr}}" style="height:{{swiperHeight}}px" bindchange="handleSwiper">
+        <swiper-item class="swiper-item">
+            <scroll-view class="" scroll-y="true" style="height:{{swiperHeight}}px" bindscrolltolower="loadMoreArice" enable-back-to-top="true">
+                <v-item items="{{followArticle}}"></v-item>
+            </scroll-view>
+        </swiper-item>
+        <swiper-item class="swiper-item">
+            <scroll-view class="" scroll-y="true"  style="height:{{swiperHeight}}px" bindscrolltolower="loadMoreArice" enable-back-to-top="true">
+                <v-people items="{{prople}}" bind:unFocus="unFocus"></v-people>
+            </scroll-view>
+        </swiper-item>
+    </swiper>
+</view>

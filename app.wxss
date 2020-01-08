@@ -1,0 +1,9 @@
+
+page{
+    font-family: microsoft yahei,-apple-system-font, Helvetica Neue, sans-serif,PingFangSC-Thin,Heiti SC;
+    font-size: 28rpx;
+    box-sizing: border-box;
+    color: #666;
+    background: #efeff4;
+    word-wrap:break-word;
+}

@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "v-discuss":"../../components/discussForm/index"
+  },
+  "navigationBarTitleText": "消息",
+  "enablePullDownRefresh":true
+}

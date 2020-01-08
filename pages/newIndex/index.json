@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "v-item":"../../components/classify/classify",
+    "v-search":"/components/search/index"
+  }
+}

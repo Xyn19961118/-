@@ -1,0 +1,41 @@
+<!-- 问题详情页 -->
+<view class="container">
+  <view class="wrap" wx:if="{{type ==0}}">
+    <view class="header">
+      <view class="head">
+        <v-tags tags="{{content.tag_name}}"></v-tags>
+        <view class="head-title">{{content.title}}</view>
+        <rich-text nodes="{{content.content}}" class="head-content {{contentIsShow?'content-overflow':''}}"></rich-text>
+        <view class="head-content-handle" wx:if="{{contentIsShow}}" bind:tap="handleOpen">
+          展开问题描述
+          <image class="icon" src="./images/isshow.png"></image>
+        </view>
+      </view>
+      <view class="handle" wx:if="{{type == 0}}">
+        <view class="handle-item handle-follow" data-id="{{content.id}}" bind:tap="focusTopic">
+          {{focus? '已关注' : ' + 关注问题'}}
+        </view>
+        <block wx:if="{{isReply}}">
+          <view class="handle-item handle-write">
+            <image class="icon" src="./images/write.png"></image>
+            已回答
+          </view>
+        </block>
+        <block wx:else>
+          <navigator url="/pages/writeReply/index?id={{topicId}}" open-type="navigate" class="handle-item handle-write">
+            <image class="icon" src="./images/write.png"></image>
+            写回答
+          </navigator>
+        </block>
+      </view>
+    </view>
+    <view class="content">
+      <v-item items="{{answerList}}" bind:lookMore="closeComment" bind:focusAuthor="focusAuthor" bind:onLike="onLike" bind:onCollect="onCollect" bind:showBlock="showBlock" bind:clickMe="clickMe"></v-item>
+    </view>
+  </view>
+  <v-article wx:if="{{type == 1}}" content="{{content}}" bind:lookMore="closeComment" bind:onLike="onLike" bind:onCollect="onCollect" bind:showBlock="showBlock" bind:clickMe="clickMe" replyId="{{topicId}}"></v-article>
+  <!-- 评论列表 -->
+  <v-comment wx:if="{{isBlock}}" bind:closeComment="closeComment" replyId="{{replyId}}" commentNumber="{{total}}" commentList="{{allComment}}" bind:onLike="clickMe" bind:onDiscuss="onDiscuss" bind:getCommentList="getCommentList" bind:deleteComment="deleteComment"></v-comment>
+  <!-- 用户评论 -->
+  <v-discuss wx:if="{{isComment}}" info="{{commentUser}}" isClose="{{isComment}}" bind:onClose="onClose" bind:onComment="onComment" />
+</view>

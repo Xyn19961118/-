@@ -1,0 +1,14 @@
+<!-- 搜索结果 -->
+<view class="container">
+  <view class="head">
+    <view class='header-wrapper'>
+      <image bind:tap="handleReturn" src='./images/return.png' class='header-img'></image>
+      <view class="header-txt" bind:tap="showSearch">{{searchName}}</view>
+    </view>
+  </view>
+  <view class="content">
+    <v-item items="{{dataItems}}" type="{{type}}"></v-item>
+  </view>
+  <!-- 搜索组件 -->
+  <v-search wx:if="{{searchStatus}}" bind:returnHandle="onGetStatus" bind:search="search"></v-search>
+</view>

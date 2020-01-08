@@ -1,0 +1,11 @@
+<!-- 我的关注 导航 -->
+<view class="container">
+    <view class="items" >
+        <view class="item {{dataCurr==0?'active':''}}" data-curr="0" bind:tap="handleClick" >
+            问题
+        </view>
+        <view class="item {{dataCurr==1?'active':''}}" data-curr="1" bind:tap="handleClick" >
+            作者
+        </view> 
+    </view>
+</view>

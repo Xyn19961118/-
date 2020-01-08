@@ -1,0 +1,27 @@
+/* pages/searchDetail/index.wxss */
+.head {
+  padding: 20rpx 30rpx;
+  background: #fff;
+}
+
+.header-wrapper {
+  background: rgb(237, 237, 237);
+  height: 70rpx;
+  border-radius: 8rpx;
+  overflow: hidden;
+  display: flex;
+  width: 100%;
+}
+
+.header-img {
+  width: 40rpx;
+  height: 40rpx;
+  padding: 15rpx 30rpx;
+}
+
+.header-txt {
+  line-height: 40rpx;
+  display: flex;
+  align-items: center;
+  min-width: 300rpx;
+}

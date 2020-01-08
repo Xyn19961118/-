@@ -1,0 +1,6 @@
+<!-- 我的关注 -->
+<view class="container">
+  <scroll-view scroll-y="true" style="height:100vh;" bindscrolltolower="lower" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+    <v-content bind:sendIndex="getNavIndex" dataCurr="1" followArticle="{{followArticle}}" prople="{{prople}}" bind:unFocus="unFocus"></v-content>
+  </scroll-view>
+</view>

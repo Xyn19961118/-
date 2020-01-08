@@ -1,0 +1,53 @@
+/* pages/userItems/selectTag/index.wxss */
+page{
+    background: #fff;
+}
+.head{
+    padding: 20rpx 30rpx;
+    color: #999;
+    font-size: 24rpx;
+}
+.content{
+    padding: 0 30rpx 20rpx 30rpx;
+}
+.items{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.item{
+    padding: 0 36rpx;
+    border: #eeeeee 2rpx solid;
+    border-radius: 8rpx;
+    height: 56rpx;
+    line-height: 56rpx;
+    margin: 0 20rpx 20rpx 0;
+    font-size: 24rpx;
+}
+.item.active{
+    background: #0084ff;
+    color: #fff;
+    border: #0084ff 2rpx solid;
+}
+.submit{
+    width: 576rpx;
+    height: 76rpx;
+    margin:20rpx auto 0;
+    background: #ddd;
+    color: #999;
+    line-height: 76rpx;
+    font-size: 28rpx;
+    border-radius: 38rpx;
+    opacity: .9;
+}
+.active{
+    background: #0084ff;
+    color: #fff;
+}
+.hoverClass{
+    opacity: 1;
+    transition: .3s;
+}
+.submit::after{
+    border: none;
+}

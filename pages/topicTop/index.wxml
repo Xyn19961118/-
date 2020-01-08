@@ -1,0 +1,49 @@
+<view class="container">
+    <view class="nav-wrapper">
+        <block wx:for="{{names}}" wx:for-index="i" wx:key="index">
+            <view class="nav-item {{dataCurr==i?'active':''}}" data-curr="{{item.curr}}" bind:tap="handleClick">
+                {{item.name}}
+                <view class="nav-proin"></view>
+            </view>
+        </block>
+    </view>
+</view>
+<view class="container">
+    <scroll-view scroll-y="true" style="height:calc(100vh - 90rpx);" bindscrolltolower="lower" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+        <view class="search-wrap">
+            <view class="search" bind:tap="searchShow">
+                <icon class="icon" type="search" size="16" color=""></icon>
+                <view class="text">请输入您要搜索的话题</view>
+            </view>
+        </view>
+        <swiper class="" bindchange="changeCurr" bindanimationfinish="" current="{{dataCurr}}" style="height:calc(100vh - 90rpx);">
+            <swiper-item>
+                <scroll-view scroll-y="true" style="height:calc(100vh - 90rpx);" bindscrolltolower="lower" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+                    <block wx:for="{{week}}" wx:key="index">
+                        <v-top item="{{item}}" index="{{index}}" number="{{item.week_look_number}}"></v-top>
+                    </block>
+                </scroll-view>
+            </swiper-item>
+            <swiper-item>
+                <scroll-view scroll-y="true" style="height:calc(100vh - 90rpx);" bindscrolltolower="lower" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+                    <block wx:for="{{month}}" wx:key="index">
+                        <v-top item="{{item}}" index="{{index}}" number="{{item.month_look_number}}"></v-top>
+                    </block>
+                </scroll-view>
+            </swiper-item>
+            <swiper-item>
+                <scroll-view scroll-y="true" style="height:calc(100vh - 90rpx);" bindscrolltolower="lower" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+                    <block wx:for="{{top}}" wx:key="index">
+                        <v-top item="{{item}}" index="{{index}}" number="{{item.look_number}}"></v-top>
+                    </block>
+                </scroll-view>
+            </swiper-item>
+        </swiper>
+    </scroll-view>
+</view>
+<view class="search-com">
+    <v-search is_show="{{is_show}}" wx:if="{{is_show}}" bind:returnHandle="returnHandle" bind:search="search"></v-search>
+</view>
+<navigator class="add" url="/pages/topic/index" hover-class="none" open-type="navigate">
+    <image class="add-img" src="./image/add.png" mode="widthFix" lazy-load></image>
+</navigator>

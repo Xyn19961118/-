@@ -1,0 +1,24 @@
+<view class="container">
+  <view class="content">
+    <view class="fiexd">
+      <v-nav dataCurr="{{dataCurr}}" bind:sendIndex="onGetIndex"></v-nav>
+    </view>
+    <swiper current="{{dataCurr}}" style="height: calc(100vh - 140rpx)" bindchange="onGetIndex">
+      <swiper-item class="swiper-item">
+        <scroll-view style="height: calc(100vh - 140rpx)" scroll-y="true" bindscrolltolower="loadMoreTopic" enable-back-to-top="true">
+          <block wx:for="{{items}}" wx:for-index="index" wx:key="idx">
+            <v-item item="{{item}}" index="{{index}}"></v-item>
+          </block>
+        </scroll-view>
+      </swiper-item>
+      <swiper-item class="swiper-item">
+        <scroll-view style="height: calc(100vh - 140rpx)" scroll-y="true" enable-back-to-top="true">
+          <block wx:for="{{hot}}" wx:for-index="index" wx:key="idx">
+            <v-item item="{{item}}" index="{{index}}" new="true"></v-item>
+          </block>
+        </scroll-view>
+      </swiper-item>
+    </swiper>
+  </view>
+  <button class="button" bind:tap="createTopic">参与讨论</button>
+</view>

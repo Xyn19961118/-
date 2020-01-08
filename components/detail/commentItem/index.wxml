@@ -1,0 +1,30 @@
+<!-- 评论列表 -->
+<block wx:for="{{comment}}" wx:key="{{item.id}}">
+  <view class="container">
+    <image class="head-pic" src="{{item.users.head_img}}" />
+    <view class="content">
+      <view class="content-wrap">
+        <view class="head-info">
+          <view class="head-name">{{item.users.wxname}}</view>
+          <view class="delete-comment" wx:if="{{item.users.id==userinfo.id}}" data-id="{{item.id}}" data-index="{{index}}" bind:tap="deleteComment">
+            删除
+          </view>
+        </view>
+        <view class="text">{{item.content}}</view>
+        <view class="bottom">
+          <view class="time">{{item.create_time}}</view>
+          <view class="center"></view>
+          <view class="handle">
+            <view class="like" data-id="{{item.id}}" data-index="{{index}}" data-pid="{{item.reply_id || item.art_id}}" bind:tap="onClick">
+              <image class="like-pic" src="{{item.likeStatus?'./images/liked.png':'./images/like.png'}}" />
+              <view class="like-text">{{item.click_number}}</view>
+            </view>
+            <image class="comment" src="./images/comment.png" bind:tap="discuss" data-name="{{item.users.wxname}}" data-userid="{{item.users.id}}" data-reply_id="{{item.reply_id || item.art_id || item.topic_id}}" data-pid="{{item.id}}" data-index="{{index}}"></image>
+          </view>
+        </view>
+      </view>
+      <v-componet childComment="{{item.son}}" bind:onLike="onLike" bind:discuss="onDiscuss" userinfo="{{userinfo}}" bind:deleteComment="sonDeleteComment"></v-componet>
+    </view>
+  </view>
+</block>
+<!-- <view class="all-comment">查看全部评论</view> -->

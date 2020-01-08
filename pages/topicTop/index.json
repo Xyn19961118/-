@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "v-top": "/components/top/top",
+    "v-search": "../../components/search/index"
+  },
+  "navigationBarTitleText": "话题热榜",
+  "enablePullDownRefresh": true
+}

@@ -1,0 +1,9 @@
+<view class='container'>
+  <block wx:for="{{items}}" wx:key="{{item.id}}" wx:for-item="item">
+    <navigator url="/pages/topicDetail/index?id={{item.id}}" class='item' hover-class='active'>
+      <view class='item-title'>#{{item.cat_name.name}}#</view>
+      <rich-text nodes="{{item.content}}" class='item-content'></rich-text>
+      <view class='item-time'>{{item.create_time}}</view>
+    </navigator>
+  </block>
+</view>

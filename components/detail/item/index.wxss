@@ -1,0 +1,87 @@
+/* components/detail/item/index.wxss */
+.container{
+    margin-bottom: 20rpx;
+}
+.item{
+    margin-top: 20rpx;
+    width: 100%;
+    background: #fff;
+    border-top: #ddd 2rpx solid;
+    border-bottom: #ddd 2rpx solid;
+    box-sizing: border-box;
+    padding: 20rpx 30rpx;
+    box-shadow: 0 10rpx 10rpx #ddd;
+}
+.userinfo{
+    display: flex;
+    align-items: center;
+}
+.userinfo-pic{
+    width: 80rpx;
+    height: 80rpx;
+    border-radius: 50%;
+    border: #eee 2rpx solid;
+    margin-right: 20rpx;
+}
+.userinfo-name{
+    color: #000;
+    font-weight: bold;
+}
+.userinfo-follow{
+    background: #f0f0f0;
+    border: none;
+    width: 120rpx;
+    height: 48rpx;
+    border-radius: 8rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    color: #0084ff;
+    font-weight: bold;
+    font-size: 24rpx;
+}
+.active{
+    background: #ddd;
+    transition: .3s;
+}
+.content{
+    margin-top: 24rpx;
+}
+.content-text{
+    color: #333;
+    line-height: 42rpx;
+}
+.content-text image{
+    width: 100%;
+}
+.content-time{
+    margin-top: 24rpx;
+    margin-bottom: 24rpx;
+    font-size: 24rpx;
+    color: #999;
+}
+.handle{
+    display: flex;
+    justify-content: space-between;
+}
+.handle-item{
+    display: flex;
+    align-items: center;
+
+}
+.handle-icon{
+    width: 33rpx;
+    height: 32rpx;
+    margin-right: 10rpx;
+}
+.handle-txt{
+    font-size: 24rpx;
+    color: #999;
+}
+.handle-like{
+    margin-left: 16rpx;
+}
+.handle-txt.selected{
+    color: #0084ff;
+}

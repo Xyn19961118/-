@@ -1,0 +1,23 @@
+<!-- 选择标签 -->
+<view class="container">
+    <view class="head" >
+        选择标签(必选)
+    </view>
+    <view class="content">
+        <scroll-view
+            scroll-y
+            style="height:800rpx;"
+        >
+            <view class="items">
+                <block wx:for="{{tags}}" wx:key="{{tag.id}}" wx:for-item="tag">
+                    <view class="item {{tag.active?'active':''}}" bind:tap="selectTag" data-id="{{tag.id}}" data-index="{{index}}">{{tag.name}}</view>
+                </block>
+                  
+                
+            </view>
+        </scroll-view>
+    </view>
+
+    <button class="submit {{selected?'active':''}}" hover-class="hoverClass" bind:tap="submit">进入主页</button>
+      
+</view>

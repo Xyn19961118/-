@@ -1,0 +1,45 @@
+<!-- 文章详情 -->
+<view class="container">
+  <view class="userinfo">
+    <navigator class="" target="" url="/pages/homePage/index?id={{content.user.id}}" hover-class="navigator-hover" open-type="navigate">
+      <image class="userinfo-pic" src="{{content.user.head_img}}" />
+    </navigator>
+    <view class="userinfo-name">{{content.user.wxname}}</view>
+    <view class="userinfo-follow {{content.focusAuthor?'active':''}}" bind:tap="followMe">
+      {{content.focusAuthor?"已关注":"+关注"}}
+    </view>
+  </view>
+  <view class="content">
+    <view class="title">{{content.title}}</view>
+    <view class="keywords">
+      <view class="keywords-label">话题：</view>
+      <view class="keywords-content">
+        <navigator url="/pages/topicList/index?id={{content.cat_id}}" hover-class="none" open-type="navigate">
+          #{{content.cat_name.name}}#
+        </navigator>
+      </view>
+    </view>
+    <rich-text class="content-content" nodes="{{content.content}}"></rich-text>
+    <view class="bottom">
+      <view class="bottom-time">发表于{{content.create_time}}</view>
+      <view class="delete" data-id="{{content.id}}" bind:tap="deleteTopic" wx:if="{{content.user.id==userinfo.id}}">
+        删除话题
+      </view>
+    </view>
+  </view>
+  <view class="hot">
+    <v-hotcomment commentList="{{content.commentList}}" commentNumber="{{content.commentTotal}}" replyId="{{content.id}}" bind:clickMe="clickMe" bind:lookMore="lookMore" bind:deleteComment="deleteComment"></v-hotcomment>
+  </view>
+  <view class="handle">
+    <view class="handle-item handle-like" bind:tap="onLike" data-index="{{index}}" data-id="{{content.id}}">
+      <image class="handle-icon" src="{{content.statusList.like_status == 1?'./images/icon01@active.png':'./images/icon01.png'}}" />
+      <view class="handle-txt {{content.statusList.like_status == 1?'selected':''}}">
+        点赞({{content.like_number}})
+      </view>
+    </view>
+    <view class="handle-item" bind:tap="showBlock" data-id="{{content.id}}" data-name="{{content.user.wxname}}">
+      <image class="handle-icon" src="./images/icon03.png" />
+      <view class="handle-txt">评论({{content.comment_number}})</view>
+    </view>
+  </view>
+</view>

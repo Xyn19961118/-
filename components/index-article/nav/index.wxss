@@ -1,0 +1,41 @@
+/* components/index-article/nav/index.wxss */
+.container {
+  box-shadow: 0 4rpx 10rpx rgba(238, 238, 238, .75);
+  background: #ffffff;
+  border-bottom: #ddd 2rpx solid;
+}
+
+.nav-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.nav-item {
+  flex: 1;
+  text-align: center;
+  position: relative;
+  padding: 20rpx 0 30rpx 0;
+  font-size: 30rpx;
+  font-weight: bold;
+  color: #777;
+}
+
+.nav-proin {
+  width: 20rpx;
+  height: 4rpx;
+  background: none;
+  position: absolute;
+  left: 50%;
+  margin-left: -10rpx;
+  bottom: 20rpx;
+}
+
+.nav-item.active {
+  color: #000;
+}
+
+.nav-item.active .nav-proin {
+  background: #000
+}

@@ -1,0 +1,47 @@
+<!-- 搜索结果列表 -->
+<view class="container">
+  <view class="items" wx:if="{{type == 1}}">
+    <block wx:for="{{items}}" wx:key="{{item.id}}" wx:for-item="item">
+      <navigator url="/pages/detail/index?type={{item.type}}&id={{item.id}}" hover-class="navigator-hover" open-type="navigate">
+        <view class="item" hover-class="active">
+          <view class="title">{{item.title}}</view>
+          <view class="content">{{item.desc}}</view>
+          <view class="bottom">
+            <block wx:if="{{item.type == 1}}">
+              {{item.collect_number}}收藏 · {{item.focus_number}}关注
+            </block>
+            <block wx:else>{{item.reply_number}}回答 · {{item.focus_number}}关注</block>
+          </view>
+        </view>
+      </navigator>
+    </block>
+  </view>
+  <view class="items" wx:if="{{type == 0}}">
+    <block wx:for="{{items}}" wx:key="{{item.id}}" wx:for-item="item">
+      <navigator url="/pages/topicDetail/index?id={{item.id}}" hover-class="navigator-hover" open-type="navigate">
+        <view class="item" hover-class="active">
+          <view class="title color">#{{item.cat_name.name}}#</view>
+          <view class="content">
+            <view class="rich-text">{{item.desc}}</view>
+            <view class="rich-imgs {{item.filter_img.length>1 && item.filter_img.length<5?'rich4':''}} {{item.filter_img.length>4?'rich9':''}}  ">
+              <block wx:for="{{item.filter_img}}" wx:key="{{index}}" wx:for-item="img">
+                <view class="rich-img">
+                  <image class="" src="{{foo.filter(img)}}" mode="widthFix" lazy-load></image>
+                </view>
+              </block>
+            </view>
+          </view>
+          <view class="bottom">{{item.comment_number}}讨论 · {{item.look_number}}热度</view>
+        </view>
+      </navigator>
+    </block>
+  </view>
+</view>
+<wxs module="foo">
+var filter = function(val){
+  return val.replace('\/','/')
+}
+module.exports = {
+  filter : filter,
+}
+</wxs>

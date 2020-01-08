@@ -1,0 +1,21 @@
+<!-- 登录页面 -->
+<view class="container">
+    <image class="bg-pic" src="http://image.prizemart.cn/mobile/images/login-bg.png" />
+    <button wx:if="{{canIUse}}" class="login-btn" open-type="getUserInfo" bindgetuserinfo="getUser" withCredentials>
+        微信一键登录
+    </button>
+    <view class="protocol">
+        <image class="protocol-label" bind:tap="agreeProtocol"
+            src="{{isAgree?'./images/selected.png':'./images/select.png'}}" lazy-load /> 同意<view class="protocol-link" bind:tap="showProtocol">
+            《AI你知道吗用户协议》</view>
+    </view>
+
+    <view class="cprotocol {{protocolIsShow?'show':''}}">
+        <view class="protocol-title">用户协议</view>
+        <scroll-view class="" scroll-y style="height:calc(100vh - 200rpx)" >
+            <rich-text class="protocol-content" nodes="{{content}}" style="width: 700rpx"></rich-text>
+        </scroll-view>
+
+        <view class="protocol-sub" bind:tap="subProtocol">确定</view>
+    </view>
+</view>

@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "v-nav": "/components/index-article/nav/index",
+    "v-item": "/components/topic/topic"
+  },
+  "enablePullDownRefresh": true
+}

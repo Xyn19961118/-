@@ -1,0 +1,7 @@
+/* pages/userItems/myFans/index.wxss */
+.myFans{
+    height: 60rpx;
+    line-height: 60rpx;
+    font-size: 24rpx;
+    padding-left: 32rpx;
+}

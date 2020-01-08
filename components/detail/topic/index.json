@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "v-tags":"/components/detail/tags/index",
+    "v-hotcomment":"/components/detail/hot-comment/index"
+  }
+}

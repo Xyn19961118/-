@@ -1,0 +1,16 @@
+<!-- 关注作者 -->
+<view class="container">
+    <view class="items">
+        <block wx:for="{{items}}" wx:key="{{item.users.id}}" wx:for-item="item">
+            <view class="item">
+                <navigator class="" target="" url="/pages/homePage/index?id={{item.users.id}}" hover-class="navigator-hover" open-type="navigate">
+                    <image class="item-pic" src="{{item.users.head_img}}" />
+                </navigator>
+                <view class="item-txt">{{item.users.wxname}}</view>
+                <view class="item-btn {{item.status==0?'active':''}}" bind:tap="handleFollow" data-index="{{index}}" data-id="{{item.users.id}}">
+                    {{item.status==0?'+ 关注':'已关注'}}
+                </view>
+            </view>
+        </block>
+    </view>
+</view>

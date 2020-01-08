@@ -1,0 +1,9 @@
+<!-- 标签 -->
+<view class="tags">
+    <block wx:for="{{tags}}" wx:key="{{index}}" wx:for-item="tag">
+        <view class="tag">{{tag}}</view>
+    </block>
+      
+    
+</view>
+  

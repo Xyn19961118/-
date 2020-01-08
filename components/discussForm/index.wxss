@@ -1,0 +1,68 @@
+/* components/discussForm/index.wxss */
+/* .container{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 99;
+} */
+.bg{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.2);
+    left: 0;
+    top: 0;
+    z-index: 100;
+}
+.wrapper{
+    background: #fff;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    height: 500rpx;
+    width: 100%;
+    z-index: 101;
+}
+.head{
+    padding: 20rpx 30rpx;
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+}
+.head-title{
+    font-size: 26rpx;
+}
+.head-close{
+    width: 28rpx;
+    height: 28rpx;
+    margin-left: auto;
+}
+.content{
+    padding: 12rpx 30rpx;
+}
+.textarea{
+    width: 100%;
+    height: 300rpx;
+}
+.bottom{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 30rpx;
+    align-items: center;
+}
+.bottom button{
+    flex: 1;
+    text-align: right;
+    font-size: 28rpx;
+    border: none;
+    background: none;
+    color: #9aceff;
+}
+.bottom button.active{
+    color: #0084ff;
+}
+.bottom button::after{
+    display: none;
+}

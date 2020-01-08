@@ -1,0 +1,23 @@
+<!-- https://www.wjx.cn/m/43422909.aspx -->
+<!-- <web-view src="https://www.wjx.cn/m/43422909.aspx" bindmessage=""></web-view> -->
+<view class="container">
+  <view class="header">
+    <view class="header-wrapper">
+      <view class="header-search">
+        <view class="header-search-icon">
+          <image class="header-search-icon-img" src="./images/search-icon.png" />
+        </view>
+        <view class="header-search-txt" bind:tap="showSearch">请输入搜索内容</view>
+      </view>
+      <view class="header-question" bind:tap="goToQuiz">
+        <image class="header-question-icon" src="./images/question-icon.png" />
+        <view class="header-question-txt">提问</view>
+      </view>
+    </view>
+    <v-search wx:if="{{searchStatus}}" bind:returnHandle="onGetStatus" bind:search="search"></v-search>
+  </view>
+  <view class="content">
+    <v-nav dataCurr="{{dataCurr}}" bind:sendIndex="onGetIndex"></v-nav>
+    <v-content dataCurr="{{dataCurr}}" bind:sendIndex="onGetIndex" followArticle="{{focus}}" newArticle="{{collect}}" hotArticle="{{hot}}" bind:getPageArt="getPageArt" bind:newPageArt="newPageArt"></v-content>
+  </view>
+</view>

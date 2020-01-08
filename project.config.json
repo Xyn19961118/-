@@ -1,0 +1,123 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"coverView": true,
+		"autoAudits": false,
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		}
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.9.1",
+	"appid": "wxe94502cbf65b4503",
+	"projectname": "git%E7%BE%8E%E5%96%84%E5%A0%82",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"list": []
+		},
+		"miniprogram": {
+			"current": 9,
+			"list": [
+				{
+					"id": -1,
+					"name": "pages/topicTop/index",
+					"pathName": "pages/topicTop/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/write/index",
+					"pathName": "pages/write/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "话题列表",
+					"pathName": "pages/topicList/index",
+					"query": "id=2",
+					"scene": null
+				},
+				{
+					"id": 3,
+					"name": "pages/topic/index",
+					"pathName": "pages/topic/index",
+					"query": "id=2&name= 陈情令南京演唱会官宣",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/homePage/index",
+					"pathName": "pages/homePage/index",
+					"query": "id=1",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "话题热榜",
+					"pathName": "pages/topicTop/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "pages/searchDetail/index",
+					"pathName": "pages/searchDetail/index",
+					"query": "val=情&type=0",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "s",
+					"pathName": "pages/topicList/index",
+					"query": "id=2&name=陈情令南京演唱会官宣"
+				},
+				{
+					"id": -1,
+					"name": "pages/topicList/index",
+					"pathName": "pages/topicList/index",
+					"query": "id=2&name= 陈情令南京演唱会官宣",
+					"scene": null
+				},
+				{
+					"id": 9,
+					"name": "pages/activity/index",
+					"pathName": "pages/activity/index",
+					"query": "id=2",
+					"scene": null
+				}
+			]
+		}
+	}
+}

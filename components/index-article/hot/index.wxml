@@ -1,0 +1,17 @@
+<wxs module="filter" src="../../../common/common.wxs"></wxs>
+<!-- 热榜 -->
+<view class="container">
+    <view class="hot">
+        <block wx:for="{{items}}" wx:key="{{item.id}}" wx:for-item="item" hover-class="active">
+            <navigator url="/pages/detail/index?type={{item.type}}&&id={{item.id}}" class="hot-item">
+                <view class="hot-rank">{{index+1}}</view>
+                <view class="hot-center">
+                    <view class="hot-title">{{item.title}}</view>
+                    <view class="hot-content">{{item.desc}}</view>
+                    <view class="hot-number">{{item.look_number}}热度</view>
+                    <view class="content-head-name" wx:if="{{item.is_send}}">已获得领取资格</view>
+                </view>
+            </navigator>
+        </block>
+    </view>
+</view>

@@ -1,0 +1,20 @@
+<!-- components/index-article/content/index.wxml -->
+<view class="container">
+  <swiper class="swiper-wrapper" duration="300" current="{{dataCurr}}" bindchange="handleSwiper" style="height: calc(100vh - 90rpx)">
+    <!-- <swiper-item class="swiper-item">
+      <scroll-view class="" style="height:{{swiperHeight}}px" scroll-y="true" bindscrolltolower="loadMoreArice" enable-back-to-top="true">
+        <v-item items="{{followArticle}}"></v-item>
+      </scroll-view>
+    </swiper-item> -->
+    <swiper-item class="swiper-item">
+      <scroll-view class="" style="height: calc(100vh - 90rpx)" scroll-y="true" bindscrolltolower="loadMoreArice" enable-back-to-top="true">
+        <v-item items="{{newArticle}}"></v-item>
+      </scroll-view>
+    </swiper-item>
+    <swiper-item class="swiper-item">
+      <scroll-view class="" style="height: calc(100vh - 90rpx)" scroll-y="true" enable-back-to-top="true" bindscrolltolower="loadMoreArice">
+        <v-hot items="{{hotArticle}}"></v-hot>
+      </scroll-view>
+    </swiper-item>
+  </swiper>
+</view>

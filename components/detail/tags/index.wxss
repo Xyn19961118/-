@@ -1,0 +1,15 @@
+/* components/detail/tags/index.wxss */
+.tags{
+    display: flex;
+}
+.tag{
+    padding: 0 16rpx;
+    height: 40rpx;
+    line-height: 40rpx;
+    overflow: hidden;
+    background: #ededed;
+    border-radius: 8rpx;
+    margin-right: 16rpx;
+    margin-bottom: 10rpx;
+    font-size: 24rpx;
+}

@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "v-item":"../../components/userComponents/question/index"
+  },
+  "navigationBarBackgroundColor": "#0084ff",
+  "navigationBarTextStyle": "white"
+}

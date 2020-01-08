@@ -1,0 +1,83 @@
+/* pages/questionnaire/index.wxss */
+page {
+  background: #fff;
+}
+
+.title {
+  font-size: 48rpx;
+  color: #09f;
+  padding: 20rpx;
+  font-weight: 800;
+  text-align: center;
+}
+
+.content {
+  width: 710rpx;
+  margin: auto;
+  padding: 40rpx 0;
+  border-bottom: #eee 2rpx dashed;
+}
+
+.items {
+  padding: 40rpx;
+}
+
+.item {
+  margin-bottom: 40rpx;
+}
+
+.item-title {
+  position: relative;
+  font-size: 32rpx;
+  font-weight: 800;
+  color: #000;
+}
+
+.tips {
+  position: absolute;
+  color: #f23;
+  left: -20rpx;
+  top: 0;
+}
+
+.item-content {
+  border: #eee 2rpx solid;
+  border-radius: 8rpx;
+  margin-top: 20rpx;
+}
+
+.item-item {
+  padding: 20rpx;
+  display: flex;
+  align-content: center;
+  border-bottom: #eee 2rpx solid;
+}
+
+.item-content .item-item:last-child {
+  border-bottom: none;
+}
+
+.icon {
+  width: 36rpx;
+  height: 36rpx;
+  margin-right: 10rpx;
+}
+
+.item-form {
+  padding: 20rpx;
+  display: flex;
+  align-items: center;
+}
+
+.item-label {
+  width: 168rpx;
+}
+
+.item-input {
+  border: #eee 2rpx solid;
+  padding: 0 20rpx;
+}
+
+.submit {
+  width: 680rpx;
+}

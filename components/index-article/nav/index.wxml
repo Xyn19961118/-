@@ -1,0 +1,17 @@
+<!-- 首页导航 -->
+<view class="container">
+  <view class="nav-wrapper">
+    <!-- <view class="nav-item {{dataCurr==0?'active':''}}" data-curr="0" bind:tap="handleClick">
+      关注
+      <view class="nav-proin"></view>
+    </view> -->
+    <view class="nav-item {{dataCurr==0?'active':''}}" data-curr="0" bind:tap="handleClick">
+      最新
+      <view class="nav-proin"></view>
+    </view>
+    <view class="nav-item {{dataCurr==1?'active':''}}" data-curr="1" bind:tap="handleClick">
+      热门
+      <view class="nav-proin"></view>
+    </view>
+  </view>
+</view>

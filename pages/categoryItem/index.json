@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "v-search":"/components/search/index",
+    "v-nav":"/components/index-article/nav/index",
+    "v-content":"/components/index-article/content/index"
+  },
+  "backgroundTextStyle":"dark",
+  "enablePullDownRefresh":true
+}

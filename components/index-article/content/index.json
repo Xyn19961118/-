@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "v-item":"./../item/index",
+    "v-hot":"./../hot/index" 
+  }
+}

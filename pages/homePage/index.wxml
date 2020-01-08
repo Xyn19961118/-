@@ -1,0 +1,56 @@
+<!-- 个人主页 -->
+<view class="container">
+    <view class="info">
+        <view class="top">
+            <image class="info-head" src="{{info.users.head_img}}" />
+        </view>
+        <view class="info-info">
+            <view class="info-name">{{info.users.wxname}}</view>
+            <view class="info-isFocus" hover-class="active" data-id="{{info.users.id}}" bind:tap="focusMe">
+                {{isFocus?"已关注":"+关注"}}
+            </view>
+        </view>
+        <view class="info-number">
+            <view class="info-item">
+                <view class="info-num">{{info.focusNumber}}</view>
+                <view class="info-label">关注</view>
+            </view>
+            <view class="info-item">
+                <view class="info-num">{{info.doFocusNumber}}</view>
+                <view class="info-label">粉丝</view>
+            </view>
+        </view>
+    </view>
+    <!-- 首页导航 -->
+    <view class="container">
+        <view class="nav-wrapper">
+            <view class="nav-item {{dataCurr==0?'active':''}}" data-curr="0" bind:tap="handleClick">
+                文章
+                <view class="nav-proin"></view>
+            </view>
+            <view class="nav-item {{dataCurr==1?'active':''}}" data-curr="1" bind:tap="handleClick">
+                话题
+                <view class="nav-proin"></view>
+            </view>
+        </view>
+    </view>
+    <view class="dynamic">
+        <block wx:for="{{list}}" wx:key="{{item.id}}" wx:for-item="item" wx:if="{{dataCurr == 0}}">
+            <navigator url="/pages/detail/index?id={{item.id}}&type=1" class='item' hover-class='active'>
+                <view class='item-title'>{{item.title}}</view>
+                <rich-text nodes="{{item.content}}" class='item-content'></rich-text>
+                <view class='item-time'>{{item.create_time}}</view>
+            </navigator>
+        </block>
+        <block wx:for="{{topics}}" wx:key="{{item.id}}" wx:for-item="item" wx:if="{{dataCurr == 1}}">
+            <navigator url="/pages/topicDetail/index?id={{item.id}}&type=1" class='item' hover-class='active'>
+                <view class='item-title'>
+                    #{{item.cat_name.name}}#
+                    <image class="item-top" src="/image/jiangbei.png" mode="widthFix" lazy-load wx:if="{{item.is_send}}"></image>
+                </view>
+                <rich-text nodes="{{item.content}}" class='item-content'></rich-text>
+                <view class='item-time'>{{item.create_time}}</view>
+            </navigator>
+        </block>
+    </view>
+</view>

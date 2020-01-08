@@ -1,0 +1,72 @@
+<!-- 个人中心 -->
+<view class="container">
+    <view class="header">
+        <image class="header-img" src="{{info.head_img}}" />
+        <view class="header-info">
+            <view class="header-name">{{info.wxname}}</view>
+            <view class="header-grade">{{info.garde}}</view>
+        </view>
+        <navigator url="../userItems/myData/index" class="header-next">
+            <!-- <view class="header-next" > -->
+            <view class="header-next-txt">个人主页</view>
+            <image class="header-next-pic" src="images/next.png" />
+            <!-- </view> -->
+        </navigator>
+    </view>
+    <view class='user-items'>
+        <!-- <view class='user-item' hover-class='active'> -->
+        <navigator url="../userItems/question/index" class="user-item" hover-class="active">
+            <view class='user-item-wrap'>
+                <image class='user-item-icon' src='images/user-icon01.png'></image>
+                <view class='user-item-txt'>我的话题</view>
+                <view class="user-num">{{userArtInfo.topic}}</view>
+                <image class='user-item-prion' src='images/next-black.png'></image>
+            </view>
+        </navigator>
+        <!-- <navigator url="../userItems/question/index?type=2" class="user-item" hover-class="active">
+      <view class='user-item-wrap'>
+        <image class='user-item-icon' src='images/user-icon02.png'></image>
+        <view class='user-item-txt'>我的回答</view>
+        <image class='user-item-prion' src='images/next-black.png'></image>
+      </view>
+    </navigator> -->
+        <navigator url="../userItems/article/index?type=1" class="user-item" hover-class="active">
+            <view class='user-item-wrap'>
+                <image class='user-item-icon' src='images/user-icon03.png'></image>
+                <view class='user-item-txt'>我的文章</view>
+                <view class="user-num">{{userArtInfo.article}}</view>
+                <image class='user-item-prion' src='images/next-black.png'></image>
+            </view>
+        </navigator>
+    </view>
+    <view class='user-items'>
+        <navigator url="../userItems/follow/index?type=3" class="user-item" hover-class="active">
+            <view class='user-item-wrap'>
+                <image class='user-item-icon' src='images/user-icon04.png'></image>
+                <view class='user-item-txt'>我的关注</view>
+                <image class='user-item-prion' src='images/next-black.png'></image>
+            </view>
+        </navigator>
+        <navigator url="../userItems/article/index?type=4" class="user-item" hover-class="active">
+            <view class='user-item-wrap'>
+                <image class='user-item-icon' src='images/user-icon05.png'></image>
+                <view class='user-item-txt'>我的收藏</view>
+                <image class='user-item-prion' src='images/next-black.png'></image>
+            </view>
+        </navigator>
+        <navigator url="../userItems/myFans/index" class="user-item" hover-class="active">
+            <view class='user-item-wrap'>
+                <image class='user-item-icon' src='images/user-icon06.png'></image>
+                <view class='user-item-txt'>我的粉丝</view>
+                <image class='user-item-prion' src='images/next-black.png'></image>
+            </view>
+        </navigator>
+    </view>
+    <!-- <view class='user-items'>
+    <view class='user-item-wrap'>
+      <view class='user-item-txt'>再次领取倒计时：</view>
+      <view style='margin-left: auto;color:#f23'></view>
+    </view>
+  </view> -->
+    <!-- <view class='test' bind:tap="gotoWen">测试跳转</view> -->
+</view>

@@ -1,0 +1,12 @@
+<view class="item">
+    <navigator url="/pages/topicList/index?id={{item.id}}&name={{item.name}}" hover-class="none" open-type="navigate">
+        <view class="header">
+            <view class="number">{{index+1}}</view>
+            <view class="topic-name">
+                #{{item.name}}#
+                <image class="topic-img" src="/image/jiangbei.png" mode="widthFix" lazy-load wx:if="{{item.is_activity}}"></image>
+            </view>
+            <view class="hot">{{number}}热度</view>
+        </view>
+    </navigator>
+</view>

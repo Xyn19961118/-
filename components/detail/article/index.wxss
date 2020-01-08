@@ -1,0 +1,127 @@
+/* components/detail/article/index.wxss */
+.container {
+  background: #fff;
+}
+
+.userinfo {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 20rpx 30rpx;
+  border-bottom: #eee 2rpx solid;
+  background: #fff;
+}
+
+.userinfo-pic {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  border: #eee 2rpx solid;
+  margin-right: 20rpx;
+}
+
+.userinfo-name {
+  color: #000;
+  font-weight: bold;
+}
+
+.userinfo-follow {
+  background: #f0f0f0;
+  border: none;
+  width: 120rpx;
+  height: 48rpx;
+  border-radius: 8rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  color: #0084ff;
+  font-weight: bold;
+  font-size: 24rpx;
+}
+
+.content {
+  padding: 20rpx 30rpx;
+}
+
+.content-content {
+  display: block;
+  margin-top: 30rpx;
+  color: #333;
+}
+
+.title {
+  font-size: 36rpx;
+  color: #000;
+  font-weight: bold;
+  margin-top: 10rpx;
+}
+
+.bottom {
+  text-align: right;
+  width: 100%;
+  line-height: 42rpx;
+  color: #999;
+  margin-top: 40rpx;
+}
+
+.hot {
+  padding: 20rpx 30rpx;
+}
+
+.handle {
+  display: flex;
+  justify-content: space-between;
+}
+
+.handle-item {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 20rpx 30rpx;
+
+}
+
+.handle-icon {
+  width: 33rpx;
+  height: 32rpx;
+  margin-right: 10rpx;
+}
+
+.handle-txt {
+  font-size: 24rpx;
+  color: #999;
+}
+
+.handle-like {
+  margin-left: 16rpx;
+}
+
+.handle-txt.selected {
+  color: #0084ff;
+}
+
+.tags {
+  margin-top: 10rpx;
+}
+
+.keywords {
+  margin-top: 8rpx;
+  display: flex;
+}
+
+.keywords-label {
+  width: 120rpx;
+}
+
+.keywords-content {
+  width: calc(100% - 120rpx);
+  color: #0084ff;
+}
+
+.delete {
+  font-size: 24rpx;
+  color: #0084ff;
+  margin-top: 12rpx;
+}

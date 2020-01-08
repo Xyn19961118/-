@@ -1,0 +1,8 @@
+<!-- 问题详情页 -->
+<view class="container">
+  <v-topic content="{{content}}" bind:lookMore="closeComment" bind:onLike="onLike" bind:showBlock="showBlock" bind:clickMe="clickMe" replyId="{{topicId}}" bind:deleteTopic="deleteTopic" bind:deleteComment="deleteComment"></v-topic>
+  <!-- 评论列表 -->
+  <v-comment wx:if="{{isBlock}}" bind:closeComment="closeComment" replyId="{{replyId}}" commentNumber="{{total}}" commentList="{{allComment}}" bind:onLike="clickMe" bind:onDiscuss="onDiscuss" bind:getCommentList="getCommentList" bind:deleteComment="deleteComment"></v-comment>
+  <!-- 用户评论 -->
+  <v-discuss wx:if="{{isComment}}" info="{{commentUser}}" isClose="{{isComment}}" bind:onClose="onClose" bind:onComment="onComment" />
+</view>

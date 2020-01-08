@@ -1,0 +1,68 @@
+page {
+  padding-top: 90rpx;
+}
+
+.item {
+  padding: 20rpx;
+  padding-bottom: 30rpx;
+  margin-bottom: 30rpx;
+  border-bottom: 2px solid #dfdfdf;
+  background: #fff;
+}
+
+.item:last-child {
+  border-bottom: none;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+}
+
+.number {
+  border: 1px solid #dfdfdf;
+  width: 40rpx;
+  height: 40rpx;
+  text-align: center;
+  background: orange;
+  color: #fff;
+  border-radius: 10rpx;
+
+}
+
+.topic-name {
+  color: blue;
+  cursor: pointer;
+  margin-left: 20rpx;
+  flex: 1;
+}
+
+.hot {
+  text-align: right;
+  padding-right: 20rpx;
+  color: #ada2a2;
+}
+
+.card {
+  margin-top: 20rpx;
+  cursor: pointer;
+}
+
+.button {
+  background: #3498db;
+  color: #fff;
+  position: fixed;
+  width: 100%;
+  text-align: center;
+  bottom: 0;
+  height: 70rpx;
+  line-height: 70rpx;
+}
+
+.fiexd {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9;
+  width: 100%;
+}

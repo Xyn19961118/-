@@ -1,0 +1,18 @@
+<!-- 评论列表 -->
+<view class="container">
+  <view class="bg"></view>
+  <view class="wrapper">
+    <view class="header">
+      <image class="close" src="./images/close.png" bind:tap="closeComment" data-id="{{replyId}}" data-count="{{commentNumber}}" />
+      <view class="header-txt">全部{{commentNumber}}条评论</view>
+    </view>
+    <view class="content">
+      <scroll-view scroll-y style="height: calc(100vh - 100rpx)" bindscrolltolower="getCommentList">
+        <view class="item">
+          <!-- 评论item -->
+          <v-commentitem comment="{{commentList}}" bind:onLike="onLike" bind:discuss="onDiscuss" bind:deleteComment="deleteComment" bind:sonDeleteComment="deleteComment"></v-commentitem>
+        </view>
+      </scroll-view>
+    </view>
+  </view>
+</view>

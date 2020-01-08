@@ -1,0 +1,102 @@
+.item {
+    padding: 20rpx;
+    padding-bottom: 30rpx;
+    margin-bottom: 30rpx;
+    border-bottom: 2px solid #dfdfdf;
+    background: #fff;
+}
+
+.item:last-child {
+    border-bottom: none;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+}
+
+.number {
+    border: 1px solid #dfdfdf;
+    width: 40rpx;
+    height: 40rpx;
+    text-align: center;
+    background: orange;
+    color: #fff;
+    border-radius: 10rpx;
+    margin-right: 20rpx;
+}
+
+.topic-name {
+    color: #3c6e9e;
+    cursor: pointer;
+    flex: 1;
+}
+
+.hot {
+    text-align: right;
+    padding-right: 20rpx;
+    color: #ada2a2;
+}
+
+.card {
+    margin-top: 20rpx;
+    cursor: pointer;
+}
+
+.content {
+    margin-top: 6rpx;
+    font-size: 24rpx;
+    line-height: 36rpx;
+    color: #666;
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    white-space: normal !important;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+.rich-imgs {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.rich-img {
+    width: 100%;
+    max-height: 400rpx;
+    display: flex;
+    justify-content: flex-start;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.rich-img image {
+    width: 100%;
+}
+
+
+.rich4 .rich-img {
+    /* width: 300rpx; */
+    width: 48.5%;
+    height: 300rpx;
+    margin-right: 10rpx;
+    margin-bottom: 10rpx;
+}
+
+.rich9 .rich-img {
+    width: 220rpx;
+    height: 220rpx;
+    margin-right: 10rpx;
+    margin-bottom: 10rpx;
+}
+
+.topic-top {
+    width: 30rpx;
+    padding-left: 30rpx;
+    position: relative;
+    top: 5rpx;
+    cursor: pointer;
+}

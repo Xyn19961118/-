@@ -1,0 +1,121 @@
+/* pages/quiz/index.wxss */
+
+.head{
+    padding: 20rpx 30rpx;
+    width: 100%;
+    box-sizing: border-box;
+    background: #fff;
+    box-shadow: 0 10rpx 10rpx #ededed;
+}
+.title{
+    height: 66rpx;
+    border-bottom: #ddd 2rpx solid;
+}
+.describe{
+    padding: 20rpx 0;
+    height: 200rpx;
+    width: 100%;
+}
+.wrapper{
+    width: 100%;
+    box-sizing: border-box;
+    background: #fff;
+    box-shadow: 0 10rpx 10rpx #ededed;
+    padding: 18rpx 30rpx;
+    margin-top: 22rpx;
+    display: flex;
+    align-items: center;
+}
+.wrapper-right{
+    flex: 1;
+}
+.items{
+    display: flex;
+    flex-wrap: wrap;
+}
+.item{
+    width: 150rpx;
+    height: 60rpx;
+    background: #eff3f6;
+    color: #000;
+    font-size: 24rpx;
+    margin-right: 22rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-bottom: 20rpx;
+}
+.close{
+    width: 30rpx;
+    height: 30rpx;
+    position: absolute;
+    right: -10rpx;
+    top: -10rpx;
+}
+.add-item{
+    height: 56rpx;
+    line-height: 56rpx;
+    padding: 0 24rpx;
+    border: #ddd 2rpx dashed;
+    
+}
+.submit{
+    background: #0084ff;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: #fff;
+    border-radius: 0;
+    font-size: 32rpx;
+    height: 90rpx;
+    line-height: 90rpx;
+}
+.images{
+    margin-top: 20rpx;
+    width: 100%;
+    display: flex;
+    box-sizing: border-box;
+    padding: 20rpx 30rpx;
+    background: #fff;
+    align-items: center;
+}
+.image-label{
+    width: 150rpx;
+}
+.wrapper-right{
+    width: calc(100% - 120rpx);
+}
+.image-item{
+    width: 140rpx;
+    height: 140rpx;
+    border: #eee 2rpx solid;
+    position: relative;
+    margin-right: 20rpx;
+}
+.image{
+    width: 140rpx;
+    height: 140rpx;
+}
+.image-close{
+    position: absolute;
+    width: 32rpx;
+    height: 32rpx;
+    right: -10rpx;
+    top: -10rpx;
+}
+.image-add{
+    width: 144rpx;
+    height: 144rpx;
+}
+.image-add-i{
+    width: 144rpx;
+    height: 144rpx;
+}
+.image-right{
+    display: flex;
+}
+.image-items{
+    display: flex;
+}

@@ -1,0 +1,27 @@
+<!-- 热门评论 -->
+<view class="container">
+  <view class="title">评论</view>
+  <view class="items">
+    <block wx:for="{{commentList}}" wx:key="{{item.id}}" wx:for-item="item">
+      <view class="item">
+        <image class="item-pic" src="{{item.users.head_img}}"></image>
+        <view class="item-content">
+          <view class="item-top">
+            <view class="item-name">{{item.users.wxname}}</view>
+            <view class="item-delete" wx:if="{{item.users.id == userinfo.id}}" bind:tap="deleteComment" data-id="{{item.id}}" data-index="{{index}}">
+              删除
+            </view>
+            <view class="item-like" bind:tap="clickMe" data-id="{{item.id}}" data-pid="{{item.reply_id || item.art_id || item.topic_id}}" data-id="{{item.id}}" data-index="{{index}}">
+              <image class="like-pic" src="{{item.likeStatus?likedUrl:likeUrl}}" />
+              <view class="like-number">{{item.click_number}}</view>
+            </view>
+          </view>
+          <view class="item-txt">{{item.content}}</view>
+        </view>
+      </view>
+    </block>
+  </view>
+  <view class="look-more" bind:tap="lookMore" data-id="{{replyId}}" data-count="{{commentNumber}}">
+    查看全部{{commentNumber}}条评论
+  </view>
+</view>

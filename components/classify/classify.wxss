@@ -1,0 +1,35 @@
+/* components/classify/classify.wxss */
+.index-center {
+  width: 180rpx;
+  margin: auto;
+  height:200rpx;
+  box-shadow: 0 0 1px 1px #eee;
+  border-radius:10rpx; 
+  overflow: hidden;
+  position: relative;
+}
+.index-text-back{
+  width: 100%;
+  height: 100rpx;
+  background: #66cff2;
+}
+.index-text-image{
+  width: 70rpx;
+  height: 70rpx;
+  position: absolute;
+  left: 50%;
+  top: 55rpx;
+  margin-left: -35rpx;
+  border-radius: 30%;
+  overflow: hidden;
+}
+.index-text-image image{
+  width: 70rpx;
+  height: 70rpx;
+}
+.index-text-text1{
+  font-size: 24rpx;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  padding-top: 45rpx;
+}

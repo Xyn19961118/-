@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "v-item":"/components/userComponents/question/index",
+    "v-people":"/components/userComponents/followPeople/index"
+  }
+}
